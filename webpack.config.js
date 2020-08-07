@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  entry: 'index.ts',
+  entry: path.resolve(__dirname, 'index.ts'),
   target: 'node',
   mode: 'none',
   resolve: {
