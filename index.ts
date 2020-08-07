@@ -54,7 +54,7 @@ async function runScript(cmd: string): Promise<void> {
     await nvim.command(`silent! bd! ${bufnr}`)
   }
   let document = await workspace.document
-  let config = workspace.getConfiguration('jest', document ? document.uri : undefined)
+  let config = workspace.getConfiguration('script', document ? document.uri : undefined)
   let position = config.get<string>('terminalPosition')
   bufnr = await nvim.call('coc#util#open_terminal', {
     autoclose: 0,
